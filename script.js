@@ -1,6 +1,6 @@
 
 const API_URL = "https://jsonplaceholder.typicode.com/posts";
-const TIME_UNLOCK_ANSWERS = 1; //sn
+const TIME_UNLOCK_ANSWERS = 10; //sn
 const TIME_QUESTION_DURATION = 30; //sn
 const MAX_QUESTION = 10;
 
@@ -24,7 +24,7 @@ const optionLetters = ['A', 'B', 'C', 'D'];
 
 document.addEventListener('DOMContentLoaded', async () => {
 
-  fetch('https://jsonplaceholder.typicode.com/posts')
+  fetch(API_URL)
     .then(response => response.json())
     .then(data => {
       questions = data.slice(0, MAX_QUESTION).map((item, index) => {
